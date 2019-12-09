@@ -40,46 +40,16 @@
 		/*Owl carousel*/
 		var owlBtn = [
 			'<span class="owl-btn previous">'+
-				'<i class="icm icm-arrow-pointing-to-right"></i>'+
+				'<i class="fa fa-angle-right"></i>'+
 			'</span>', 
 			'<span class="owl-btn next">'+
-				'<i class="icm icm-arrow-pointing-to-right"></i>'+
+				'<i class="fa fa-angle-right"></i>'+
 			'</span>'
 		]
 
 
-		$(".irrigation-imgs-items.owl-carousel").owlCarousel({
-			nav: true,
-			//items: 3,
-			dots: false,
-			dotsEach: true,
-			autoplay: true,
-			touchDrag: false,
-			responsive:{
-				0:{items:1},
-				991:{items:1}
-			},
-			navText : owlBtn,
-			margin: 0
-		});
 
-
-
-		$(".short-productions-items.owl-carousel").owlCarousel({
-			nav: true,
-			//items: 3,
-			dots: false,
-			dotsEach: true,
-			autoplay: true,
-			touchDrag: checkSm(),
-			responsive:{
-				0:{items:1},
-				991:{items:3}
-			},
-			navText : owlBtn,
-			margin: 30
-		});
-		$(".productions-article-items.owl-carousel").owlCarousel({
+		$(".short-cer-items.owl-carousel").owlCarousel({
 			nav: true,
 			//items: 3,
 			dots: false,
@@ -93,6 +63,29 @@
 			navText : owlBtn,
 			margin: 30
 		});
+		var spoCarousel = $(".short-projects-items.owl-carousel").owlCarousel({
+			nav: true,
+			//items: 3,
+			dots: false,
+			dotsEach: true,
+			autoplay: true,
+			touchDrag: checkSm(),
+			responsive:{
+				0:{items:1},
+				991:{items:4}
+			},
+			navText : owlBtn,
+			margin: 30
+		});
+			// var owlItem = spoCarousel.find(".owl-item");
+			// owlItem.map(function(i, el){
+			// 	el = $(el);
+			// 	if( i % 2 ){
+			// 		el.addClass("down");
+			// 		console.log(el);
+			// 	}
+			// })
+
 
 		$(".projects-items.owl-carousel").owlCarousel({
 			nav: true,

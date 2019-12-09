@@ -21,7 +21,7 @@ $color-footer: #0071BC;
 $color-gray-1: #f6f6f6; //#bdbdbd
 $color-gray-2: #eeeeee;
 $color-gray-3: #c8c8c8;
-$color-gray-4: #636262;
+$color-gray-4: #666666;
 $color-gray-5: #333333;
 
 
@@ -586,8 +586,7 @@ div.btn-style{
 	text-align: center;	
 	overflow: hidden;
 	font-family: $font-family-1;
-	font-weight: 500;
-	text-transform: uppercase;
+	font-weight: 700;
 	border-radius: 5px;
 	&.text-wrap{
 		white-space: wrap;
@@ -1061,7 +1060,6 @@ main{
 		list-style: disc;
     padding-left: 15px;
     li{
-    	font-weight: 800;
     	margin-top: 5px;
     	line-height: 170%;
     	margin-bottom: 5px;
@@ -1127,7 +1125,7 @@ hr{
 	
 	
 	p:not([class*="color-"]){
-		line-height: 200%;
+		line-height: 170%;
 		color: $color-gray-5;
 		margin-bottom: 20px;
 		font-weight: 500;
@@ -1147,15 +1145,15 @@ hr{
 html{
 	.form-control{
 		border-radius: 0;
-		background-color: white;
-		border: 1px solid $color-gray-3;
-		border-radius: 5px;
+		background-color: $color-gray-1;
+		border: 1px solid $color-gray-1;
+		border-radius: 0;
 		&:focus{
 			border-color: $color-1;
 		}
 	}
 	input.form-control{
-		height: 42px;
+		height: 40px;
 	}
 	textarea.form-control{
 		height: 130px;

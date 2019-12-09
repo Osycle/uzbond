@@ -621,8 +621,8 @@ div.owl-nav{
 	justify-content: center;
 	align-items: center;
 	transition: all 0.2s ease-in-out;
-	color: $color-1;
-	box-shadow: inset 0 -4px 0 rgba(black, 0.2);
+	color: white;
+	box-shadow: inset 0 -4px 0 rgba(black, 0.2), 0 6px 20px rgba($color-1, 0.4);
 	font-size: 17px;
 	&:nth-child(1){
 		margin-right: 2px;
@@ -639,6 +639,7 @@ div.owl-nav{
 	}
 	i{
 		display: inline-block;
+		height: 19px;
 	}
 	svg{
 		width: 50px;
