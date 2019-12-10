@@ -176,8 +176,8 @@
 		$("#min-menu").mmenu({
 			extensions: [
 				"wrapper-bg", // wrapper-bg black
-				//"theme-dark",
-				"theme-white",
+				"theme-dark",
+				//"theme-white",
 				//"fullscreen",
 				"listview-50",
 				"fx-panels-slide-up",
@@ -286,6 +286,88 @@
 		};
 		carouselArticle();
 		
+		window.albumMainCarousel = $(".album-main-items.owl-carousel").owlCarousel({
+			nav: checkSm(),
+			//items: 3,
+			dots: false,
+			dotsEach: true,
+			autoplay: false,
+			animateOut: 'fadeOut',
+			smartSpeed:450,
+			touchDrag: false,
+			responsive:{
+				0:{items:1},
+				991:{items:1}
+			},
+			navText : owlBtn,
+			margin: 30
+		});
+
+		$(".album-items figure").on("click", function(){
+			var index = $(this).index();
+			albumMainCarousel.trigger('to.owl.carousel', [index]);
+		})
+
+
+
+	//VERTICAL CAROUSEL
+	var jcarouselWrapper = $('.jcarousel-wrapper') || null;
+	if (jcarouselWrapper)
+		for( var i =  0; i < jcarouselWrapper.length; i++ ){
+			
+			jcarouselWrapper.eq(i).find(".jcarousel")
+				.jcarousel({
+		      vertical: checkSm() ? true : true,
+		      wrap: 'both',
+		       animation: {
+			        duration: 600,
+			        easing:   'linear',
+			        complete: function() {
+			        }
+			    },
+		      center: false
+		    })
+				.on('jcarousel:targetin', 'figure', function( event, carousel ) {
+				    $(this).addClass('active');
+				    var index = $(this).index();
+				})
+				.on('jcarousel:targetout', 'figure', function( event, carousel ) {
+						$(this).removeClass('active');
+				})
+
+				jcarouselWrapper.eq(i).find(".jcarousel").jcarousel('scroll', '0');
+				jcarouselWrapper.eq(i).find(".jcarousel").jcarousel('fullyvisible');
+
+
+			// CONTROLS
+			var prevNext = jcarouselWrapper.eq(i).find(".jcarousel-prev-next");
+
+			//prev
+			prevNext.find(".jcarousel-control-prev")
+			  .on('jcarouselcontrol:active', function() {
+	          $(this).removeClass('inactive');
+	      })
+	      .on('jcarouselcontrol:inactive', function() {
+	          $(this).addClass('inactive');
+	      })
+	      .jcarouselControl({
+	          target: '-=1'
+	      });
+
+	     //next
+	    prevNext.find(".jcarousel-control-next")
+	      .on('jcarouselcontrol:active', function() {
+	          $(this).removeClass('inactive');
+	      })
+	      .on('jcarouselcontrol:inactive', function() {
+	          $(this).addClass('inactive');
+	      })
+	      .jcarouselControl({
+	          target: '+=1'
+	      });
+		}//:end for;
+
+
 
     // Прибавление-убавление значении
     (function(){

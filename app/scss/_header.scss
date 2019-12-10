@@ -438,7 +438,7 @@ ul[class*="sub-menu"]{
 	z-index: 100;
 	color: black;
 	box-shadow: 0 0 20px 0 black;
-	background-color: white;
+	background-color: $color-3;
 	font-size: 0.9em;
 	.min-menu-logo{
 		padding: 12px 0;
@@ -484,6 +484,9 @@ ul[class*="sub-menu"]{
 
 
 // ---MM-MENU---
+.mm-menu.mm-theme-dark{
+	background: $color-3;
+}
 .mm-panels{
 	.list-cars{
 		padding: 0;
