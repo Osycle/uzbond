@@ -1106,8 +1106,25 @@ figcaption{
 
 //gamma
 .gamma-items{
+	figure{
+		position: relative;
+		transition: all 0.3s ease;
+		*{
+			backface-visibility: hidden;
+		}
+		&:hover{
+			transform: scale(1.07);
+			//box-shadow: 0 0 20px;
+			@extend .shadow-def;
+			cursor: pointer;
+		}
+	}
 	.desc-content{
 		background-color: $color-3;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
 		padding: 6px 15px;
 		color: white;
 	}
@@ -1116,7 +1133,6 @@ figcaption{
 		background-size: cover;
 	}
 }
-
 
 .productions-accordion{
 	.panel-title{

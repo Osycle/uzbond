@@ -7032,7 +7032,7 @@ table {
   background-repeat: no-repeat;
   background-position: center; }
 
-.shadow-def, .short-about .entry-content, .album-main-items, .news-items figure, .select2-dropdown {
+.shadow-def, .short-about .entry-content, .album-main-items, .news-items figure, .gamma-items figure:hover, .select2-dropdown {
   -webkit-box-shadow: 0 0 22px -3px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 22px -3px rgba(0, 0, 0, 0.2); }
 
@@ -9727,8 +9727,26 @@ figcaption {
     color: #e44000;
     font-weight: 800; }
 
+.gamma-items figure {
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .gamma-items figure * {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+  .gamma-items figure:hover {
+    -webkit-transform: scale(1.07);
+    -ms-transform: scale(1.07);
+    transform: scale(1.07);
+    cursor: pointer; }
+
 .gamma-items .desc-content {
   background-color: #1c1c28;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   padding: 6px 15px;
   color: white; }
 
